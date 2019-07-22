@@ -1,0 +1,70 @@
+package bus_stop
+
+//http://svc.metrotransit.org/NexTrip/{ROUTE}/{DIRECTION}/{STOP}
+// {
+//  "Actual": false,
+//  "BlockNumber": 9,
+//  "DepartureText": "4:35",
+//  "DepartureTime": "\/Date(1563788100000-0500)\/",
+//  "Description": "to Mpls-Target Field",
+//  "Gate": "1",
+//  "Route": "Blue",
+//  "RouteDirection": "NORTHBOUND",
+//  "Terminal": "",
+//  "VehicleHeading": 0,
+//  "VehicleLatitude": 0,
+//  "VehicleLongitude": 0
+// }
+//http://svc.metrotransit.org/NexTrip/Stops/{ROUTE}/{DIRECTION}
+// {
+//  "Text": "Mall of America Station",
+//  "Value": "MAAM"
+// }
+//http://svc.metrotransit.org/NexTrip/Routes
+// {
+//  "Description": "METRO Blue Line",
+//  "ProviderID": "8",
+//  "Route": "901"
+// }
+//http://svc.metrotransit.org/NexTrip/Directions/{ROUTE}
+// {
+//  "Text": "NORTHBOUND",
+//  "Value": "4"
+// }
+type Direction struct {
+	Text  string `json:"Text"`
+	Value string `json:"Value"`
+}
+
+type Routes struct {
+	Description string `json:"Description"`
+	ProviderID  int    `json:"ProviderID"`
+	Route       int    `json:"Route"`
+}
+
+type Stops struct {
+	Text  string `json:"Text"`
+	Value string `json:"Value"`
+}
+
+//  "Actual": false,
+//  "BlockNumber": 9,
+//  "DepartureText": "4:35",
+//  "DepartureTime": "\/Date(1563788100000-0500)\/",
+//  "Description": "to Mpls-Target Field",
+//  "Gate": "1",
+//  "Route": "Blue",
+//  "RouteDirection": "NORTHBOUND",
+//  "Terminal": "",
+//  "VehicleHeading": 0,
+//  "VehicleLatitude": 0,
+//  "VehicleLongitude": 0
+// }
+
+type TimeDepartures struct {
+	Actual        bool   `json:"Actual"`
+	BlockNumber   int    `json:"BlockNumber"`
+	DepartureText string `json:"DepartureText"`
+	DepartureTime string `json:"DepartureTime"`
+	Description
+}
