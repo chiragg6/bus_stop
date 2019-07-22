@@ -3,6 +3,8 @@ package main
 import (
 	"fmt"
 	"os"
+
+	"github.com/bus_stop/bus"
 )
 
 func main() {
@@ -10,5 +12,5 @@ func main() {
 		fmt.Println("Please send proper parameters")
 		os.Exit(1)
 	}
-	metro.GetETATime(os.Args[1], os.Args[2], os.Args[3])
+	bus.GetETATime(os.Args[1], os.Args[2], os.Args[3])
 }
