@@ -1,5 +1,8 @@
 # bus_stop
 
+1. Clone the project in GOPATH/src/github/
+2. go run main.go "argument-1" "argument-2" "argument-3"
+
 This project is designed to give estimate time for a bus to come at a particular bus stop, by providing bus route details with bus stop and direction.
 
 So it will scroll on all the bus schedules on running on required route and will get next bus arriving at bus stand in least time.
