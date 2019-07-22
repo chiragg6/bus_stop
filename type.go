@@ -47,24 +47,17 @@ type Stops struct {
 	Value string `json:"Value"`
 }
 
-//  "Actual": false,
-//  "BlockNumber": 9,
-//  "DepartureText": "4:35",
-//  "DepartureTime": "\/Date(1563788100000-0500)\/",
-//  "Description": "to Mpls-Target Field",
-//  "Gate": "1",
-//  "Route": "Blue",
-//  "RouteDirection": "NORTHBOUND",
-//  "Terminal": "",
-//  "VehicleHeading": 0,
-//  "VehicleLatitude": 0,
-//  "VehicleLongitude": 0
-// }
-
 type TimeDepartures struct {
-	Actual        bool   `json:"Actual"`
-	BlockNumber   int    `json:"BlockNumber"`
-	DepartureText string `json:"DepartureText"`
-	DepartureTime string `json:"DepartureTime"`
-	Description
+	Actual           bool   `json:"Actual"`
+	BlockNumber      int    `json:"BlockNumber"`
+	DepartureText    string `json:"DepartureText"`
+	DepartureTime    string `json:"DepartureTime"`
+	Description      string `json:"Description"`
+	Gate             string `json:"Gate"`
+	Route            string `json:"Route"`
+	RouteDirection   string `json:"RouteDirection"`
+	Terminal         string `json:"Terminal"`
+	VehicleHeading   int    `json:"VehicleHeading"`
+	VehicleLatitude  int    `json:"VehicleLatitude"`
+	VehicleLongitude int    `json:"VehicleLongitude"`
 }
