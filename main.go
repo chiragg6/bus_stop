@@ -9,6 +9,7 @@ import (
 
 func main() {
 	if len(os.Args) < 4 {
+		// Checking length of passed arguments
 		fmt.Println("Please send proper parameters")
 		os.Exit(1)
 	}
