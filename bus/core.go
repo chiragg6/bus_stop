@@ -39,6 +39,7 @@ func init() {
 	noBusError = errors.New("no bus found")
 }
 
+// doRequest will the send the request to api and handle the response
 func doRequest(URL, method string) ([]byte, error) {
 	req, err := http.NewRequest(method, URL, nil)
 	if err != nil {
@@ -65,6 +66,8 @@ func doRequest(URL, method string) ([]byte, error) {
 	return respByte, err
 }
 
+// Get Estimate Arrival time at particular bus stop
+
 func GetETATime(route, stop, direction string) {
 	routeID, err := getRoute(route)
 	if err != nil {
@@ -90,6 +93,7 @@ func GetETATime(route, stop, direction string) {
 	}
 }
 
+// getRoutes - it will get full routes list
 func getRoute(busRoute string) (string, error) {
 	resp, err := doRequest(routeURL, http.MethodGet)
 	if err != nil {
